@@ -2,23 +2,20 @@ package com.example.tenistournament.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.viewModels
-import androidx.lifecycle.Observer
 import com.example.tenistournament.R
-import com.example.tenistournament.ui.viewModel.TournamentViewModel
+import com.example.tenistournament.domain.matchGames.FinalGame
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    private val tournamentViewModel:TournamentViewModel by viewModels()
+    private lateinit var playerWin: FinalGame
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        tournamentViewModel.getWinner()
+        playerWin.winner
 
-        tournamentViewModel.tournamentLiveData.observe(this, Observer { it })
     }
 }
