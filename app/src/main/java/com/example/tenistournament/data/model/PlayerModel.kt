@@ -1,6 +1,6 @@
 package com.example.tenistournament.data.model
 
-data class PlayerModel(
+/*data class PlayerModel(
     val playerOne: String = "PlayerOne",
     val playerOneHability: Int = (0..100).random(),
     val playerTwo: String = "PlayerTwo",
@@ -8,5 +8,10 @@ data class PlayerModel(
     val playerThree: String = "PlayerThree",
     val playerThreeHability: Int = (0..100).random(),
     val playerFour: String = "PlayerFour",
-    val playerFourHability: Int = (0..100).random()
+    val playerFourHability: Int = (0..100).random(),
+)*/
+
+data class PlayerModel(
+    val players: List<String> = listOf("playerOne", "playerTwo", "playerThree","playerFour"),
+    val playerHability: Int = (0..100).random()
 )

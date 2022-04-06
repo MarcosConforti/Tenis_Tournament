@@ -15,7 +15,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        playerWin.winner
-
+        getWin()
     }
+    private fun getWin(): String {
+        return playerWin.finalGame()
+    }
+
 }

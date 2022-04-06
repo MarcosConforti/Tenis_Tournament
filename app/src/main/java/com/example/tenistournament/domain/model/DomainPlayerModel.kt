@@ -1,11 +1,16 @@
 package com.example.tenistournament.domain.model
 
-data class DomainPlayerModel(val playerOne: String = "PlayerOne",
+/*data class DomainPlayerModel(val playerOne: String = "PlayerOne",
                              val playerOneHability: Int = (0..100).random(),
                              val playerTwo: String = "PlayerTwo",
                              val playerTwoHability: Int = (0..100).random(),
                              val playerThree: String = "PlayerThree",
                              val playerThreeHability: Int = (0..100).random(),
                              val playerFour: String = "PlayerFour",
-                             val playerFourHability: Int = (0..100).random())
+                             val playerFourHability: Int = (0..100).random())*/
+
+data class DomainPlayerModel(
+    val players: List<String> = listOf("playerOne", "playerTwo", "playerThree","playerFour"),
+    val playerHability: Int = (0..100).random()
+)
 
